@@ -1,0 +1,63 @@
+@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-logo-color {
+  background-color: #1786c4 !important;
+}
+
+.bg-logo-color-hover:hover {
+  background-color: #1786c4;
+}
+
+/** Custom Scrollbar */
+/* .TEA-router-view {
+  padding-right: 0.5rem;
+} */
+/* width */
+.TEA-router-view::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+.TEA-apps-list:hover::-webkit-scrollbar-thumb {
+  background: #cecece;
+}
+.TEA-router-view:hover::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  position: absolute;
+  right: 0;
+}
+
+/** Custom Scrollbar */
+/* .TEA-router-view2 {
+  padding-right: 0.5rem;
+} */
+/* width */
+.TEA-router-view2::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Handle on hover */
+.TEA-apps-list2:hover::-webkit-scrollbar-thumb {
+  background: #cecece;
+}
+.TEA-router-view2:hover::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  position: absolute;
+  right: 0;
+}
