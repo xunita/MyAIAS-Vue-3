@@ -75,7 +75,13 @@ const sysPrompt =
 
 ## API Reference
 
-The package if setup right make a POST api call to the following endpoint: **https://myaias.azurewebsites.net**
+The package if setup right make a POST api call to the following endpoint: **https://myaias.azurewebsites.net** ()
+
+### Endpoint Github (for transparency)
+
+**https://github.com/xunita/MyAIAS-Express-Js.git**
+
+**Feel free to request a feature to set up you own backend endpoint**
 
 ### Chat completion only
 
