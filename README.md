@@ -54,16 +54,19 @@ app.mount('#app')
 // Example of usage
 // Eg: App.vue
 <script setup lang="ts">
-import MainMyAIAS from 'myaias';
+import { MainMyAIAS } from 'myaias';
+
 const modelSettings = {
   endpoint: <endpoint>,
   apiKey: <apiKey>,
   apiVersion: <apiVersion>,
   deployment: <deployment>,
 }
+
 const sysPrompt =
   '{ "role": "system", "content": [ { "text": "You are a helpfull assistant." } ] }'
 </script>
+
 <template>
   <MainMyAIAS :modelSettings="modelSettings" :sysPrompt="sysPrompt" />
 </template>
