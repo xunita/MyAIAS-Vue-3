@@ -75,7 +75,7 @@ const sysPrompt =
 
 ## API Reference
 
-The package if setup right make a POST api call to the following endpoint: **https://myaias.azurewebsites.net** ()
+The package if setup right make a POST api call to the following endpoint: **https://myaias.azurewebsites.net**
 
 ### Endpoint Github (for transparency)
 
