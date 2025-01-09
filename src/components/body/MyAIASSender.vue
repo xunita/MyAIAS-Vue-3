@@ -34,7 +34,7 @@ const sendMessage = () => {
     ></div>
     <p v-if="!messageLength" class="absolute z-0 pl-2 inline-block">
       <span class="text-xs font-semibold text-gray-500 line-clamp-1 pr-12"
-        >Message... (Shit + Alt)</span
+        >Message... (Shift + Alt)</span
       >
     </p>
     <button
