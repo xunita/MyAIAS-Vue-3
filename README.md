@@ -1,13 +1,8 @@
-
 ![Logo](https://myaias.blob.core.windows.net/myaias/myaias/logo.png)
-
 
 # MyAIAS
 
 A vue 3 component wrapper for Azure AI Foundry Chat completion models
-
-Note that I just did this for a personal use and decide to share it to whoever might need something like this. Even if not the case, some people might have inspiration from it to do something better.
-
 
 ## Installation
 
@@ -55,7 +50,6 @@ app.mount('#app')
 
 ## MainMyAIAS component props requirement & usage
 
-
 ```javascript
 // Example of usage
 // Eg: App.vue
@@ -75,6 +69,7 @@ const sysPrompt =
 </template>
 
 ```
+
 ## API Reference
 
 The package if setup right make a POST api call to the following endpoint: **https://myaias.azurewebsites.net**
@@ -85,10 +80,9 @@ The package if setup right make a POST api call to the following endpoint: **htt
   POST /api/askMe
 ```
 
-| Body | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `data` | `Object` | **Required**. Your model settings, system prompt, user prompt and the last 10 messages if any |
-
+| Body   | Type     | Description                                                                                  |
+| :----- | :------- | :------------------------------------------------------------------------------------------- |
+| `data` | `Object` | **Required**. Your model settings, system prompt,user prompt and the 10 last messages if any |
 
 ## Contributing
 
@@ -96,14 +90,38 @@ Contributions are always welcome!
 
 Modify the code to suit your need or even tackle me for bad code 😊
 
-
 ## Authors
 
 - [@xunita](https://www.github.com/xunita)
-
 
 ## MainMyAIAS component UI
 
 ![MyAIAS](https://myaias.blob.core.windows.net/myaias/myaias/brb.png)
 
+## Run Locally
 
+Clone the project
+
+```bash
+  git clone https://github.com/xunita/MyAIAS-Vue-3.git
+```
+
+Go to the project directory
+
+```bash
+  cd <my-project>
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the development server
+
+```bash
+  npm run dev
+```
+
+Don't forget to update the **App.vue** data with your own models settings (**modelSettings** and **sysPrompt**)
