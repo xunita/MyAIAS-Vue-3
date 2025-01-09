@@ -4,6 +4,8 @@
 
 A vue 3 component wrapper for Azure AI Foundry Chat completion models
 
+Note that I just did this for a personal use and decide to share it to whoever might need something like this. Even if not the case, some people might have inspiration from it to do something better.
+
 ## Installation
 
 ```bash
