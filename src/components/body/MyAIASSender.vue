@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { askMyAIAS } from '@/controller/ask'
 import { useMyAIAS } from '@/composables/useMyAIAS'
 const { isThinking } = useMyAIAS()
@@ -7,12 +7,18 @@ const focused = ref(false)
 const message = ref('')
 const messageLength = computed(() => message.value.length)
 const messageKey = ref(-1)
-//
 
 const sendMessage = () => {
   // Send message to the server
   if (!isThinking.value) askMyAIAS(message, messageKey)
 }
+
+onMounted(() => {
+  // Focus on the input when the chat is opened
+  setTimeout(() => {
+    document.getElementById('myaias-sender-input').focus()
+  }, 100)
+})
 </script>
 <template>
   <div
@@ -23,6 +29,7 @@ const sendMessage = () => {
     class="w-full rounded-bl-md rounded-br-md bg-white bg-dark-theme flex items-center relative"
   >
     <div
+      id="myaias-sender-input"
       :key="messageKey"
       @keypress.enter.exact="sendMessage"
       @keypress.shift.enter.exact="message += '\n'"
