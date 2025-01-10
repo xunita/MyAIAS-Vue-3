@@ -9,6 +9,7 @@ const _settings = reactive({
   apiKey: '',
   apiVersion: '',
   deployment: '',
+  maxTokens: 800,
 })
 const _systemPrompt = ref('')
 const _backend_endpoint = ref('')
@@ -35,6 +36,7 @@ const setSettings = (settings) => {
   _settings.apiKey = settings.apiKey
   _settings.apiVersion = settings.apiVersion
   _settings.deployment = settings.deployment
+  _settings.maxTokens = settings.maxTokens || 800
 }
 
 const getLast5Messages = () => {

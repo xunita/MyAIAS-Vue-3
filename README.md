@@ -63,6 +63,7 @@ const modelSettings = {
   apiKey: <apiKey>,
   apiVersion: <apiVersion>,
   deployment: <deployment>,
+  maxTokens: <maxTokens>, // 800 by default
 }
 
 const sysPrompt =
