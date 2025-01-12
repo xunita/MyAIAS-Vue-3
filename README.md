@@ -59,11 +59,11 @@ app.mount('#app')
 import { MainMyAIAS } from 'myaias';
 
 const modelSettings = {
-  endpoint: <endpoint>,
-  apiKey: <apiKey>,
-  apiVersion: <apiVersion>,
-  deployment: <deployment>,
-  maxTokens: <maxTokens>, // 800 by default
+  endpoint: 'https://<sasURL>.openai.azure.com/',
+  apiKey: 'hhijjkdfdsfkddklopaaakdjkfjdskfjdfslpdfdsdfdsfdsaaFTYuhgJK', // this is not a real api key
+  apiVersion: '2024-08-01-preview',
+  deployment: 'gpt-4o-mini',
+  maxTokens: 800, // if not set, default is 800
 }
 
 const sysPrompt =

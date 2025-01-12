@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import MainMyAIAS from './components/body/MainMyAIAS.vue'
 const modelSettings = {
-  endpoint: '',
-  apiKey: '',
-  apiVersion: '',
-  deployment: '',
+  endpoint: 'https://<sasURL>.openai.azure.com/',
+  apiKey: 'hhijjkdfdsfkddklopaaakdjkfjdskfjdfslpdfdsdfdsfdsaaFTYuhgJK', // this is not a real api key
+  apiVersion: '2024-08-01-preview',
+  deployment: 'gpt-4o-mini',
   maxTokens: 800, // if not set, default is 800
 }
 const sysPrompt = '{ "role": "system", "content": [ { "text": "You are a helpfull assistant." } ] }'
