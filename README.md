@@ -67,7 +67,7 @@ const modelSettings = {
 }
 
 const sysPrompt =
-  '{ "role": "system", "content": [ { "text": "You are a helpfull assistant." } ] }'
+  '{ "role": "system", "content": [ {"type": "text", "text": "You are a helpfull assistant." } ] }' // add the attribute "type": "text" to the content object to avaid 429 rate limit error
 </script>
 
 <template>
