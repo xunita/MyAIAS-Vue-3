@@ -55,7 +55,7 @@ const askMyAIAS = async (message, messageKey) => {
       setTimeout(() => {
         scrollToBottomById('chatMyAIAS')
       }, 250)
-    }, 500)
+    }, 250)
   }
   // ...
   message.value = ''
