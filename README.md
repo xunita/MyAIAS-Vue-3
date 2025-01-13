@@ -108,7 +108,7 @@ Modify the code to suit your need or even tackle me for bad code 😊
 
 ## MainMyAIAS component UI
 
-![MyAIAS](https://myaias.blob.core.windows.net/myaias/myaias/brb.png)
+![MyAIAS](https://myaias.blob.core.windows.net/myaias/myaias/santasecret.png)
 
 ## Run Locally
 
