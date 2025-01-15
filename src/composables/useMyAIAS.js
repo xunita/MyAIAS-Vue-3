@@ -10,7 +10,7 @@ const _settings = reactive({
   apiVersion: '',
   deployment: '',
   maxTokens: 800,
-  lastXMessages: 10,
+  oldMessages: 10,
 })
 const _systemPrompt = ref('')
 const _backend_endpoint = ref('')
@@ -38,11 +38,11 @@ const setSettings = (settings) => {
   _settings.apiVersion = settings.apiVersion
   _settings.deployment = settings.deployment
   _settings.maxTokens = settings.maxTokens || 800
-  _settings.lastXMessages = settings.lastXMessages || 10
+  _settings.oldMessages = settings.oldMessages || 10
 }
 
 const getLastXMessages = () => {
-  return Array.from(_messages.values()).slice(-_settings.lastXMessages)
+  return Array.from(_messages.values()).slice(-_settings.oldMessages)
 }
 
 const buildPrompt = (prompt) => {
