@@ -10,6 +10,7 @@ const _settings = reactive({
   apiVersion: '',
   deployment: '',
   maxTokens: 800,
+  lastXMessages: 10,
 })
 const _systemPrompt = ref('')
 const _backend_endpoint = ref('')
@@ -37,14 +38,15 @@ const setSettings = (settings) => {
   _settings.apiVersion = settings.apiVersion
   _settings.deployment = settings.deployment
   _settings.maxTokens = settings.maxTokens || 800
+  _settings.lastXMessages = settings.lastXMessages || 10
 }
 
-const getLast5Messages = () => {
-  return Array.from(_messages.values()).slice(-10)
+const getLastXMessages = () => {
+  return Array.from(_messages.values()).slice(-_settings.lastXMessages)
 }
 
 const buildPrompt = (prompt) => {
-  const last5Msg = getLast5Messages()
+  const last5Msg = getLastXMessages()
   const prompts = []
   for (const msg of last5Msg) {
     if (msg.sender === 'user') {
