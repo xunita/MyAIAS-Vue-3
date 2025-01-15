@@ -52,8 +52,10 @@ function askMeSender(
           let chunkText = decoder.decode(value, { stream: true })
           // append the chunk to the message content
           if (chunkText.includes('data: [CHUNK]')) {
-            const cleanedChunkText = chunkText.replace('data: [CHUNK]', '')
-            aiMessage.appendContent(cleanedChunkText)
+            setTimeout(() => {
+              const cleanedChunkText = chunkText.replace('data: [CHUNK]', '')
+              aiMessage.appendContent(cleanedChunkText)
+            }, 250)
           } else if (chunkText.includes('data: [ERROR]')) {
             console.error('Error in stream:', chunkText.replace('data: [ERROR]', ''))
             if (!aiMessage.content.length) {
