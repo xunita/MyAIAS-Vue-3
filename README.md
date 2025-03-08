@@ -73,7 +73,12 @@ const sysPrompt =
 </script>
 
 <template>
-  <MainMyAIAS :modelSettings="modelSettings" :sysPrompt="sysPrompt" />
+  <MainMyAIAS 
+  :enableRemoteEndpoint="true"
+  :endpoint="null"  
+  :modelSettings="modelSettings" 
+  :sysPrompt="sysPrompt" 
+  />
 </template>
 
 ```

@@ -18,16 +18,16 @@ const props = defineProps({
     type: String,
     default: null,
   },
-  remoteEndpoint: {
+  enableRemoteEndpoint: {
     type: Boolean,
-    default: false,
+    default: true,
   },
 })
 
-const _setBackendEndpoint = (endpoint = null) => {
-  if (endpoint) {
-    setBackendEndpoint(endpoint)
-  } else if (props.remoteEndpoint) {
+const _setBackendEndpoint = () => {
+  if (props.endpoint) {
+    setBackendEndpoint(props.endpoint)
+  } else if (props.enableRemoteEndpoint) {
     setBackendEndpoint('https://myaias.azurewebsites.net/api')
   } else {
     if (process.env.NODE_ENV === 'development') {
