@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Message from '../../models/message';
+import Message from '../../models/message'
 const props = defineProps({
   message: {
     type: Message,
@@ -23,7 +23,7 @@ const props = defineProps({
       alt="MyAIAS"
       class="h-5 w-5 rounded-full"
     />
-    <span
+    <div
       class="text-[13px] rounded-md p-2"
       :class="{
         'bg-logo-color': message.isFromAI(),
@@ -40,14 +40,16 @@ const props = defineProps({
         ></div>
         <div class="h-1.5 w-1.5 bg-white rounded-full animate-bounce"></div>
       </div>
-      <span
+      <div
         v-else
         :class="{
           'text-white': message.isFromAI(),
         }"
         class="font-semibold text-[13px]"
-        >{{ message.content }}</span
       >
-    </span>
+        <div v-if="message.isFromAI()" v-html="message.content"></div>
+        <span v-else>{{ message.content }}</span>
+      </div>
+    </div>
   </div>
 </template>
