@@ -14,11 +14,33 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  endpoint: {
+    type: String,
+    default: null,
+  },
+  remoteEndpoint: {
+    type: Boolean,
+    default: false,
+  },
 })
+
+const _setBackendEndpoint = (endpoint = null) => {
+  if (endpoint) {
+    setBackendEndpoint(endpoint)
+  } else if (props.remoteEndpoint) {
+    setBackendEndpoint('https://myaias.azurewebsites.net/api')
+  } else {
+    if (process.env.NODE_ENV === 'development') {
+      setBackendEndpoint('http://localhost:9191/api')
+    } else {
+      setBackendEndpoint('https://myaias.azurewebsites.net/api')
+    }
+  }
+}
 onMounted(() => {
   setSettings(props.modelSettings)
   setSystemPrompt(props.sysPrompt)
-  setBackendEndpoint('https://myaias.azurewebsites.net/api')
+  _setBackendEndpoint(props.endpoint)
 })
 </script>
 <template>
