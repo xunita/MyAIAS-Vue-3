@@ -1,6 +1,6 @@
 {
   "name": "myaias",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A Vue 3 AI personal assistant component",
   "main": "./dist/myaias.umd.cjs",
   "license": "MIT",
