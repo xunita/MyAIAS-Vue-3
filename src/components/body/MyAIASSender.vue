@@ -11,6 +11,9 @@ const messageKey = ref(-1)
 const sendMessage = () => {
   // Send message to the server
   if (!isThinking.value) askMyAIAS(message, messageKey)
+  setTimeout(() => {
+    document.getElementById('myaias-sender-input').focus()
+  }, 100)
 }
 
 onMounted(() => {
