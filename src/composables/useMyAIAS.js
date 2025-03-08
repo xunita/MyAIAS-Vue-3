@@ -11,6 +11,7 @@ const _settings = reactive({
   deployment: '',
   maxTokens: 800,
   oldMessages: 10,
+  stream: true,
 })
 const _systemPrompt = ref('')
 const _backend_endpoint = ref('')
@@ -39,6 +40,7 @@ const setSettings = (settings) => {
   _settings.deployment = settings.deployment
   _settings.maxTokens = settings.maxTokens || 800
   _settings.oldMessages = settings.oldMessages || 10
+  _settings.stream = settings.stream ?? true
 }
 
 const getLastXMessages = () => {

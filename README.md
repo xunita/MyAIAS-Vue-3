@@ -65,6 +65,7 @@ const modelSettings = {
   deployment: 'gpt-4o-mini',
   maxTokens: 800, // if not set, default is 800
   oldMessages: 50, // if not set, default is 10 (ai + user included)
+  stream: true, // if not set, default is true
 }
 
 const sysPrompt =
